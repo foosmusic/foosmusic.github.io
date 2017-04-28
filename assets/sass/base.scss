@@ -1,0 +1,701 @@
+@import "compass";
+//colors
+$grey: #444444;
+$white: #ffffff;
+$yellow: yellow;
+$color_fuscous_gray_approx: #555;
+$color_pink_swan_approx: #bbb;
+$color_mine_shaft_approx: #333;
+$color_suva_gray_approx: #888;
+$color_picton_blue_approx: #33c3f0;
+$color_scooter_approx: #1eaedb;
+$color_celeste_approx: #d1d1d1;
+$seashell: #f1f1f1;
+$color_bon_jour_approx: #e1e1e1;
+//fonts
+$font-0: Dosis;
+$font-1: sans-serif;
+html {
+    font-size: 62.5%;
+    background-color: $grey;
+}
+
+body {
+    font-family: $font-0, $font-1;
+    color: $white;
+}
+
+::selection {
+    color: $grey;
+    background: $white;
+}
+
+::-moz-selection {
+    color: $grey;
+    background: $white;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 10.0rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 60px;
+    line-height: 1.25;
+    font-weight: 100;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 3.0rem;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 2.4rem;
+    line-height: 1.35;
+    font-weight: 500;
+}
+
+h5 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+h6 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+p {
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+@media(min-width: 550px) {
+    h1 {
+        font-size: 5.0rem;
+    }
+    h2 {
+        font-size: 4.2rem;
+    }
+    h3 {
+        font-size: 3.6rem;
+    }
+    h4 {
+        font-size: 3.0rem;
+    }
+    h5 {
+        font-size: 2.4rem;
+    }
+    h6 {
+        font-size: 1.5rem;
+    }
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+    //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+    transition: color .2s;
+    &:hover {
+        color: $yellow;
+    }
+}
+
+.button {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: $color_fuscous_gray_approx;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    border: 1px solid $color_pink_swan_approx;
+    cursor: pointer;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    &:hover {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &.button-primary {
+        color: $white;
+        background-color: $color_picton_blue_approx;
+        border-color: $color_picton_blue_approx;
+        &:hover {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+        &:focus {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+    }
+}
+
+button {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: $color_fuscous_gray_approx;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    border: 1px solid $color_pink_swan_approx;
+    cursor: pointer;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    &:hover {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &.button-primary {
+        color: $white;
+        background-color: $color_picton_blue_approx;
+        border-color: $color_picton_blue_approx;
+        &:hover {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+        &:focus {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+    }
+}
+
+input[type="submit"] {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: $color_fuscous_gray_approx;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    border: 1px solid $color_pink_swan_approx;
+    cursor: pointer;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    &:hover {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &.button-primary {
+        color: $white;
+        background-color: $color_picton_blue_approx;
+        border-color: $color_picton_blue_approx;
+        &:hover {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+        &:focus {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+    }
+}
+
+input[type="reset"] {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: $color_fuscous_gray_approx;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    border: 1px solid $color_pink_swan_approx;
+    cursor: pointer;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    &:hover {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &.button-primary {
+        color: $white;
+        background-color: $color_picton_blue_approx;
+        border-color: $color_picton_blue_approx;
+        &:hover {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+        &:focus {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+    }
+}
+
+input[type="button"] {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: $color_fuscous_gray_approx;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    border: 1px solid $color_pink_swan_approx;
+    cursor: pointer;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    &:hover {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &:focus {
+        color: $color_mine_shaft_approx;
+        border-color: $color_suva_gray_approx;
+        outline: 0;
+    }
+    &.button-primary {
+        color: $white;
+        background-color: $color_picton_blue_approx;
+        border-color: $color_picton_blue_approx;
+        &:hover {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+        &:focus {
+            color: $white;
+            background-color: $color_scooter_approx;
+            border-color: $color_scooter_approx;
+        }
+    }
+}
+
+input[type="email"] {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: $white;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    appearance: none;
+    &:focus {
+        border: 1px solid $color_picton_blue_approx;
+        outline: 0;
+    }
+}
+
+input[type="number"] {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: $white;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    appearance: none;
+    &:focus {
+        border: 1px solid $color_picton_blue_approx;
+        outline: 0;
+    }
+}
+
+input[type="search"] {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: $white;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    appearance: none;
+    &:focus {
+        border: 1px solid $color_picton_blue_approx;
+        outline: 0;
+    }
+}
+
+input[type="text"] {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: $white;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    appearance: none;
+    &:focus {
+        border: 1px solid $color_picton_blue_approx;
+        outline: 0;
+    }
+}
+
+input[type="tel"] {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: $white;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    appearance: none;
+    &:focus {
+        border: 1px solid $color_picton_blue_approx;
+        outline: 0;
+    }
+}
+
+input[type="url"] {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: $white;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    appearance: none;
+    &:focus {
+        border: 1px solid $color_picton_blue_approx;
+        outline: 0;
+    }
+}
+
+input[type="password"] {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: $white;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    appearance: none;
+    &:focus {
+        border: 1px solid $color_picton_blue_approx;
+        outline: 0;
+    }
+}
+
+textarea {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: $white;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    appearance: none;
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 1.5rem;
+    &:focus {
+        border: 1px solid $color_picton_blue_approx;
+        outline: 0;
+    }
+}
+
+select {
+    height: 38px;
+    padding: 6px 10px;
+    background-color: $white;
+    border: 1px solid $color_celeste_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+    //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+    box-shadow: none;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    &:focus {
+        border: 1px solid $color_picton_blue_approx;
+        outline: 0;
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+    > .label-body {
+        display: inline-block;
+        margin-left: .5rem;
+        font-weight: normal;
+    }
+}
+
+legend {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+fieldset {
+    padding: 0;
+    border-width: 0;
+    margin-bottom: 1.5rem;
+}
+
+input[type="checkbox"] {
+    display: inline;
+}
+
+input[type="radio"] {
+    display: inline;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    ul {
+        margin: 1.5rem 0 1.5rem 3rem;
+        font-size: 90%;
+        display: inline-block;
+    }
+    ol {
+        margin: 1.5rem 0 1.5rem 3rem;
+        font-size: 90%;
+        display: inline-block;
+    }
+}
+
+ol {
+    list-style: decimal inside;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    ol {
+        margin: 1.5rem 0 1.5rem 3rem;
+        font-size: 90%;
+        display: inline-block;
+    }
+    ul {
+        margin: 1.5rem 0 1.5rem 3rem;
+        font-size: 90%;
+        display: inline-block;
+    }
+}
+
+li {
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+code {
+    padding: .2rem .5rem;
+    margin: 0 .2rem;
+    font-size: 90%;
+    white-space: nowrap;
+    background: $seashell;
+    border: 1px solid $color_bon_jour_approx;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 4px;
+}
+
+pre {
+    margin-bottom: 2.5rem;
+    > code {
+        display: block;
+        padding: 1rem 1.5rem;
+        white-space: pre;
+    }
+}
+
+th {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid $color_bon_jour_approx;
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid $color_bon_jour_approx;
+    &:first-child {
+        padding-left: 0;
+    }
+    &:last-child {
+        padding-right: 0;
+    }
+}
+
+input {
+    margin-bottom: 1.5rem;
+}
+
+blockquote {
+    margin-bottom: 2.5rem;
+}
+
+dl {
+    margin-bottom: 2.5rem;
+}
+
+figure {
+    margin-bottom: 2.5rem;
+}
+
+table {
+    margin-bottom: 2.5rem;
+}
+
+form {
+    margin-bottom: 2.5rem;
+}
+
+.u-full-width {
+    width: 100%;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+}
+
+.u-max-full-width {
+    max-width: 100%;
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+}
+
+.u-pull-right {
+    float: right;
+}
+
+.u-pull-left {
+    float: left;
+}
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    border-width: 0;
+    border-top: 1px solid $color_bon_jour_approx;
+}

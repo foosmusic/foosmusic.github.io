@@ -21,3 +21,8 @@ $(function () {
         }
     });
 });
+$(document).ready(function () {
+    $("#logo").hover(function () {
+        $(this).children("div.navmenu").toggle();
+    });
+});

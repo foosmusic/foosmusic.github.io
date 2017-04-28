@@ -1,0 +1,120 @@
+@import "compass";
+//colors
+$grey: #444444;
+$white: #ffffff;
+$yellow: #ffc846;
+//style
+header {
+    margin-bottom: 8rem;
+    #logo {
+        width: 50px;
+        padding: 40px 40px 0 40px;
+        float: left;
+    }
+    #navmenu {
+        padding: 70px 25px;
+        float: right;
+        text-align: center;
+    }
+    .navmenu {
+        padding: 70px 25px;
+        float: right;
+        text-align: center;
+    }
+    .text {
+        padding: 0 3px 0 3px;
+    }
+    .dash {
+        padding: 0;
+    }
+    a {
+        font-weight: 100;
+        font-size: 18px;
+        color: $white;
+        text-decoration: none;
+        transition: color .2s;
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    #logo {
+        float: none !important;
+        display: block;
+        margin: 0 auto;
+    }
+    #navmenu {
+        float: none !important;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .navmenu {
+        transition: .2s all;
+        float: none !important;
+        display: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+    background-color: $grey;
+    li {
+        padding: 0 25px;
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: color .2s;
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.center_text {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.indent {
+    padding-left: 50px;
+}
+
+.indent_2 {
+    padding-left: 100px;
+}
+
+.spacer {
+    padding: 20px;
+}
+
+.spacer_2 {
+    padding: 80px;
+}
+
+.top {
+    margin-top: 4rem;
+}
+
+.bottom {
+    margin-bottom: 6rem;
+}
